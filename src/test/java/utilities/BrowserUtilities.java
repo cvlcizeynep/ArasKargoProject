@@ -1,4 +1,4 @@
-package ArasKargoTeam2.utilities;
+package utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Random;
 
-import static ArasKargoTeam2.utilities.Driver.driver;
+import static utilities.Driver.driver;
 
 
 public class BrowserUtilities {

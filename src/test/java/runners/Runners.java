@@ -1,4 +1,4 @@
-package ArasKargoTeam2.runners;
+package runners;
 
 
 import io.cucumber.junit.Cucumber;

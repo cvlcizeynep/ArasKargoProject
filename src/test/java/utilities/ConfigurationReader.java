@@ -1,4 +1,4 @@
-package ArasKargoTeam2.utilities;
+package utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;

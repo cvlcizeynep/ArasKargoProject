@@ -175,5 +175,12 @@ public class ReusableMethods {
         js.executeScript("window.scrollBy(0,2500)");
         waitFor(2);
     }
-
+    public static void click(WebElement element) {
+        try {
+            element.click();
+        } catch (Exception e) {
+            JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+            js.executeScript("arguments[0].click();", element);
+        }
+    }
 }

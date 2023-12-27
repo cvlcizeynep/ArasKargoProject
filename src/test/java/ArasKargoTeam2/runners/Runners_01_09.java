@@ -16,24 +16,12 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags = "",
-        dryRun =false
+        tags = "@TC_01",
+        dryRun =true
 )
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-public class Runners {
+public class Runners_01_09 {
 }

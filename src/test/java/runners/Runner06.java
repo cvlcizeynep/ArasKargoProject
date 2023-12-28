@@ -1,6 +1,4 @@
 package runners;
-
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -17,12 +15,9 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags = "@TC_01",
+        tags = "@US06",
         dryRun =true
 )
+public class Runner06 {
 
-
-
-
-public class Runners_01_09 {
 }

@@ -32,7 +32,7 @@ public class Driver {
                 driver = new ChromeDriver();
             } else if ("firefox".equals(browser)) {
                 driver = new FirefoxDriver();
-            } else if ("ie".equals(browser)) {
+            } else if ("edge".equals(browser)) {
                 driver = new InternetExplorerDriver();
             } else if ("safari".equals(browser)) {
                 driver = new SafariDriver();

@@ -1,9 +1,7 @@
 package ArasKargoTeam2.stepDefinitions;
 
 import ArasKargoTeam2.pages.US01_Dashboard_Pages;
-import ArasKargoTeam2.utilities.ConfigurationReader;
-import ArasKargoTeam2.utilities.Driver;
-import ArasKargoTeam2.utilities.ReusableMethods;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,6 +12,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import utilities.ConfigurationReader;
+import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class US_01 {
     US01_Dashboard_Pages dashboardPages = new US01_Dashboard_Pages();

@@ -368,4 +368,5 @@ public class ReusableMethods {
             ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
         }
 
+
 }

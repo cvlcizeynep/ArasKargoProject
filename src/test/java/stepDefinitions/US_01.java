@@ -1,6 +1,6 @@
-package ArasKargoTeam2.stepDefinitions;
+package stepDefinitions;
 
-import ArasKargoTeam2.pages.US01_Dashboard_Pages;
+import pages.US01_Dashboard_Pages;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -12,7 +12,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utilities.ConfigurationReader;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -22,7 +22,7 @@ public class US_01 {
 
     @Given("Kullanici_Anasayfaya_Gider")
     public void kullanici_anasayfaya_gider() throws InterruptedException {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
         Thread.sleep(5);
         SearchContext searchContext = Driver.getDriver().findElement(By.xpath("//efilli-layout-default[@class='efilli-layout-default']")).getShadowRoot();
         WebElement rejectButton = searchContext.findElement(By.className("banner__accept-button"));

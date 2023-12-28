@@ -1,4 +1,4 @@
-package ArasKargoTeam2.pages;
+package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

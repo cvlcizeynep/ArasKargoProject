@@ -363,7 +363,6 @@ public class ReusableMethods {
             }
 
         }
-
         public static void clickElementByJS(WebElement element) {
             ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", ReusableMethods.waitForVisibility(element,5));
             ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);

@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags = "@US06",
+        tags = "@us12Nermin",
         dryRun =true
 )
 public class Runner06 {

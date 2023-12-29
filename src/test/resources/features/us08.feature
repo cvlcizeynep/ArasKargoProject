@@ -12,6 +12,7 @@
     Scenario:Kullanıcı bireysel sekmesinde drop downdaki bilgi butonunu kullanabilmeli
       And Kullanici bilgi butonunu tiklar ve kullanilabildigini dogrular
 
+
     @US08_TC02
     Scenario:Kullanıcı bireysel sekmesinde drop downdaki islem-talep butonunu kullanabilmeli
       And Kullanici islem-talep butonunu tiklar ve kullanilabildigini dogrular

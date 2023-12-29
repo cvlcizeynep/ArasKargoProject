@@ -1,13 +1,13 @@
 package stepDefinitions;
 
-import ArasKargoTeam2.pages.Page_US06;
-import ArasKargoTeam2.pages.US01_Dashboard_Pages;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import pages.Page_US06;
 import utilities.Driver;
 import utilities.ReusableMethods;
 

@@ -1,8 +1,7 @@
 @US08
-  Feature: Kullanıcı Müşteri Hizmetleri → Geri Bildirim Formu →
-    Bireysel sekmesi drop downdaki elementleri kullanabilmeli.
+  Feature:Kullanıcı Müşteri Hizmetleri Geri Bildirim Formu Bireysel sekmesi drop downdaki elementleri kullanabilmeli
 
-  @Background:
+  Background: us08
 
   Given Kullanici aras kargo sayfa url'sine gider
   When Kullanici ekrandaki bilgilendirme yazisini kapatir
@@ -19,7 +18,7 @@
 
     @US08_TC03
     Scenario:Kullanıcı bireysel sekmesinde drop downdaki oneri butonunu kullanabilmeli
-      And Kullanici bilgi butonunu tiklar ve kullanilabildigini dogrular
+      And Kullanici oneri butonunu tiklar ve kullanilabildigini dogrular
 
     @US08_TC04
     Scenario:Kullanıcı bireysel sekmesinde drop downdaki sikayet-problem butonunu kullanabilmeli

@@ -2,6 +2,11 @@ package stepDefinitions;
 
 import pages.US01_Dashboard_Pages;
 
+<<<<<<< Updated upstream:src/test/java/stepDefinitions/US_01.java
+=======
+import ArasKargoTeam2.pages.US01_Dashboard_Pages;
+
+>>>>>>> Stashed changes:src/test/java/ArasKargoTeam2/stepDefinitions/US_01.java
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,7 +17,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+<<<<<<< Updated upstream:src/test/java/stepDefinitions/US_01.java
 import utilities.ConfigReader;
+=======
+import utilities.ConfigurationReader;
+>>>>>>> Stashed changes:src/test/java/ArasKargoTeam2/stepDefinitions/US_01.java
 import utilities.Driver;
 import utilities.ReusableMethods;
 

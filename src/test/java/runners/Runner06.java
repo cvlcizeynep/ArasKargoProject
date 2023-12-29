@@ -15,7 +15,11 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepDefinitions",
+ rabia
+        tags = "@US06",
+
         tags = "@US07",
+ main
         dryRun =false
 )
 public class Runner06 {

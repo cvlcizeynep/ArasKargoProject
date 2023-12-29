@@ -2,12 +2,17 @@ package stepDefinitions;
 
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.Page_US06;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -98,5 +103,14 @@ public class US06 {
     @And("Kullanici kutu\\/koli tiklar ve hizmet turunu secer.")
     public void kullaniciKutuKoliTiklarVeHizmetTurunuSecer() {
         ReusableMethods.click(page_us06.kutu_koli_button);
+    }
+
+    @Given("Kullanici aras kargo sayfasına gider.")
+    public void kullaniciArasKargoSayfasınaGider() throws InterruptedException {
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
+        Thread.sleep(10);
+        SearchContext searchContext = Driver.getDriver().findElement(By.xpath("//efilli-layout-default[@class='efilli-layout-default']")).getShadowRoot();
+        WebElement rejectButton = searchContext.findElement(By.className("banner__accept-button"));
+        ReusableMethods.click(rejectButton);
     }
 }

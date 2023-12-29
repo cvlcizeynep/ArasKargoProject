@@ -1,9 +1,9 @@
 @US06
 Feature: US_06  Kullanıcı Ücret Hesapla pop-up ındaki yurt dışı ücret hesabını yapabilmeli.
 
-  @Background:
+  Background:
 
-  Given Kullanici aras kargo sayfa url'ine gider.
+  Given Kullanici aras kargo sayfasına gider.
     When Kullanici ekrandaki ucreti hesapla butonuna tiklar
     Then Kullanici acilan sayfada yurtdisi sekmesine tiklar.
     Then Kullanici nereye(ülke) dropdownına tiklar ve random bir ülke secer.

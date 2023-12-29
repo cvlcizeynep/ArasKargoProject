@@ -11,7 +11,7 @@ Feature: US_06  Kullanıcı Ücret Hesapla pop-up ındaki yurt dışı ücret he
 
 
   @US06_TC01
-  Scenario:Kullanıcı yurtdisi icin Dosya / Evrak ucretini hesaplayabilmeli
+  Scenario: Kullanıcı yurtdisi icin Dosya / Evrak ucretini hesaplayabilmeli
 
     And Kullanici dosya/evrak tiklar ve hizmet turunu secer.
     And Kullanici gönderi detayından toplam ücretin görüntülendigini dogrular.

@@ -1,7 +1,7 @@
 
 Feature: US_07 Kullanicinin En Yakin Subeler Pop-up ini Kullanmasi
 
-  @Background:
+  Background:
   Given Kullanici urle gider
     When Acilan sayfada alertler varsa kapatir
     When Sayfada sol asagi kisinda bulunan en yakin subeler butonuna tiklar

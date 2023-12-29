@@ -2,7 +2,7 @@
   Feature: Kullanıcı Müşteri Hizmetleri → Geri Bildirim Formu →
     Bireysel sekmesi drop downdaki elementleri kullanabilmeli.
 
-  @Background:
+  Background:
 
   Given Kullanici aras kargo sayfa url'sine gider
   When Kullanici ekrandaki bilgilendirme yazisini kapatir

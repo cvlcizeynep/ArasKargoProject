@@ -1,4 +1,4 @@
-@us07
+@US07
 Feature: US_07 Kullanicinin En Yakin Subeler Pop-up ini Kullanmasi
 
   Background:

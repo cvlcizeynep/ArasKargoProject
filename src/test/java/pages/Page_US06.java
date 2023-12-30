@@ -12,6 +12,9 @@ public class Page_US06 {
     @FindBy(xpath = "//*[@class='takip-form no-p']")
     public WebElement ucreti_hesapla_button;
 
+    @FindBy(xpath = "//*[@class='popup-close']")
+    public WebElement popup_close;
+
     @FindBy(xpath = "//*[@class='active']")
     public WebElement yurtdisi_button;
 

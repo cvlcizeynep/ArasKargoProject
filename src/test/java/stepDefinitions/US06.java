@@ -11,7 +11,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import pages.Page_US06;
+import pages.Pages0413;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -20,6 +22,7 @@ import java.util.Optional;
 
 public class US06 {
     Page_US06 page_us06 = new Page_US06();
+    Pages0413 us0413 = new Pages0413();
 
     Actions actions = new Actions(Driver.getDriver());
 
@@ -37,8 +40,9 @@ public class US06 {
     @Then("Kullanici nereye\\(ülke) dropdownına tiklar ve random bir ülke secer.")
     public void kullaniciNereyeÜlkeDropdownınaTiklarVeRandomBirÜlkeSecer() {
         ReusableMethods.click(page_us06.nereye_button);
-        //ReusableMethods.selectRandomTextFromDropdown(page_us06.nereye_button,);
-        //**************************      dropdown & random class
+        Select dropdown = new Select(page_us06.nereye_button);
+        dropdown.selectByVisibleText("ALMANYA");
+
     }
 
 
@@ -52,7 +56,10 @@ public class US06 {
 
     @And("Kullanici Ağırlık , yükseklik , boy , en bilgilerini girer")
     public void kullaniciAğırlıkYükseklikBoyEnBilgileriniGirer() {
-       // actions.sendKeys("1").sendKeys(Keys.TAB).sendKeys("3").sendKeys(Keys.TAB).sendKeys("2").sendKeys(Keys.TAB).sendKeys("2").perform();
+        page_us06.agirlik_input.sendKeys("1");
+        page_us06.en_input.sendKeys("2");
+        page_us06.boy_input.sendKeys("3");
+        page_us06.yukselik_input.sendKeys("3");
     }
 
     @And("Kullanici  Desi Kg Hesapla butonuna tiklar.")
@@ -77,40 +84,51 @@ public class US06 {
 
     @And("Kullanici   AĞIRLIK olarak invalid deger, yükseklik, en ve boy olarak valid degerler girer")
     public void kullaniciAĞIRLIKOlarakInvalidDegerYükseklikEnVeBoyOlarakValidDegerlerGirer() {
-        //actions.sendKeys(page_us06.agirlik_input)
+        page_us06.agirlik_input.sendKeys("-1");
+        page_us06.en_input.sendKeys("2");
+        page_us06.boy_input.sendKeys("3");
+        page_us06.yukselik_input.sendKeys("3");
     }
 
     @And("Kullanici   Desi Kg Hesapla butonuna tiklanır")
     public void kullaniciDesiKgHesaplaButonunaTiklanır() {
+
         ReusableMethods.click(page_us06.desi_hesapla);
     }
 
 
     @And("Kullanici   agırlık, yükseklik, en ve boy olarak invalid degerler girer")
     public void kullaniciAgırlıkYükseklikEnVeBoyOlarakInvalidDegerlerGirer() {
+        page_us06.agirlik_input.sendKeys("-1");
+        page_us06.en_input.sendKeys("-2");
+        page_us06.boy_input.sendKeys("-3");
+        page_us06.yukselik_input.sendKeys("-3");
     }
 
     @And("Kullanici   agırlık olarak valid, yükseklik, en ve boy olarak invalid degerler girer")
     public void kullaniciAgırlıkOlarakValidYükseklikEnVeBoyOlarakInvalidDegerlerGirer() {
+        page_us06.agirlik_input.sendKeys("1");
+        page_us06.en_input.sendKeys("-2");
+        page_us06.boy_input.sendKeys("-3");
+        page_us06.yukselik_input.sendKeys("-3");
     }
 
 
     @And("Kullanici dosya\\/evrak tiklar ve hizmet turunu secer.")
     public void kullaniciDosyaEvrakTiklarVeHizmetTurunuSecer() {
+
         ReusableMethods.click(page_us06.dosya_evrak_button);
     }
 
     @And("Kullanici kutu\\/koli tiklar ve hizmet turunu secer.")
     public void kullaniciKutuKoliTiklarVeHizmetTurunuSecer() {
+
         ReusableMethods.click(page_us06.kutu_koli_button);
     }
 
-    @Given("Kullanici aras kargo sayfasına gider.")
-    public void kullaniciArasKargoSayfasınaGider() throws InterruptedException {
-        Driver.getDriver().get(ConfigReader.getProperty("url"));
-        Thread.sleep(10);
-        SearchContext searchContext = Driver.getDriver().findElement(By.xpath("//efilli-layout-default[@class='efilli-layout-default']")).getShadowRoot();
-        WebElement rejectButton = searchContext.findElement(By.className("banner__accept-button"));
-        ReusableMethods.click(rejectButton);
+    @Then("Kullanici popup kapatir.")
+    public void kullaniciPopupKapatir() {
+        ReusableMethods.click(page_us06.popup_close);
     }
+
 }
